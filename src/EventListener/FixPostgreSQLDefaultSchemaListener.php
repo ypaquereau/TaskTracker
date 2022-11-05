@@ -10,6 +10,10 @@ use Doctrine\DBAL\Schema\SchemaException;
 use Doctrine\ORM\Tools\Event\GenerateSchemaEventArgs;
 
 // From https://gist.github.com/vudaltsov/ec01012d3fe27c9eed59aa7fd9089cf7
+
+/**
+ * @codeCoverageIgnore
+ */
 final class FixPostgreSQLDefaultSchemaListener
 {
     /**
