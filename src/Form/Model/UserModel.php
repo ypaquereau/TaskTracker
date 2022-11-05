@@ -3,10 +3,12 @@
 namespace App\Form\Model;
 
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Validator\UniqueUser;
 
 class UserModel
 {
     #[Assert\Email]
+    #[UniqueUser]
     private string $email;
 
     #[Assert\NotBlank]

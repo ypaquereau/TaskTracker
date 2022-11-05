@@ -68,3 +68,8 @@ db-migrate:
 
 db-rollback:
 	$(SYMFONY_CONSOLE) doctrine:migration:migrate prev --no-interaction
+
+db-test:
+	$(SYMFONY_CONSOLE) doctrine:database:drop --if-exists --force --env=test
+	$(SYMFONY_CONSOLE) doctrine:database:create --env=test
+	$(SYMFONY_CONSOLE) doctrine:migrations:migrate --env=test --no-interaction

@@ -49,7 +49,7 @@ final class UserModelTest extends KernelTestCase
     {
         $userModel = new UserModel();
 
-        $userModel->setEmail('test@test.com');
+        $userModel->setEmail('user@test.com');
         $userModel->setPassword('password');
         $userModel->setFirstName('firstname');
         $userModel->setLastName('lastname');
