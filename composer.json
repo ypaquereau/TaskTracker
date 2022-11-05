@@ -19,6 +19,7 @@
         "symfony/proxy-manager-bridge": "6.1.*",
         "symfony/runtime": "6.1.*",
         "symfony/security-bundle": "6.1.*",
+        "symfony/twig-bundle": "6.1.*",
         "symfony/ux-turbo": "^2.4",
         "symfony/validator": "6.1.*",
         "symfony/yaml": "6.1.*"
@@ -81,6 +82,8 @@
         }
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "liip/test-fixtures-bundle": "^2.4",
         "phpstan/extension-installer": "^1.2",
         "phpstan/phpstan": "^1.8",
         "phpstan/phpstan-doctrine": "^1.3",

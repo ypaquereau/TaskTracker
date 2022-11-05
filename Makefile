@@ -15,7 +15,7 @@ down:
 logs:
 	$(DOCKER_COMPOSE) logs -f
 
-build:
+docker-build:
 	$(DOCKER_COMPOSE) build --pull --no-cache
 
 fix-permission:
