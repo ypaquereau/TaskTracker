@@ -21,7 +21,7 @@ final class UserModelTest extends KernelTestCase
      */
     protected function setUp(): void
     {
-        $validator = self::getContainer()->get('validator');
+        $validator = self::getContainer()->get(ValidatorInterface::class);
         $this->validator = $validator;
 
         self::bootKernel();
