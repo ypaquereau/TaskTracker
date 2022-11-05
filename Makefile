@@ -21,8 +21,7 @@ docker-build:
 fix-permission:
 	$(PHP_EXEC) chown -R $(shell id -u):$(shell id -g) .
 
-## —— Php ————————————————————————————————————————————————————————————
-
+## —— Php ———————————————————————————————————————————————————————————
 php:
 	$(PHP_EXEC) sh
 
@@ -42,7 +41,6 @@ phpunit:
 	$(COMPOSER) phpunit
 
 ## —— Node ————————————————————————————————————————————————————————————
-
 npm:
 	$(NODE_RUN) sh
 
@@ -57,3 +55,16 @@ npm-watch:
 
 npm-build:
 	$(NODE_RUN) npm run build
+
+## —— Database ————————————————————————————————————————————————————————————
+db-diff:
+	$(SYMFONY_CONSOLE) make:migration
+
+db-generate:
+	$(SYMFONY_CONSOLE) doctrine:migration:generate
+
+db-migrate:
+	$(SYMFONY_CONSOLE) doctrine:migration:migrate --no-interaction
+
+db-rollback:
+	$(SYMFONY_CONSOLE) doctrine:migration:migrate prev --no-interaction
