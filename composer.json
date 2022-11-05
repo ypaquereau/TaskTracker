@@ -20,6 +20,7 @@
         "symfony/runtime": "6.1.*",
         "symfony/security-bundle": "6.1.*",
         "symfony/ux-turbo": "^2.4",
+        "symfony/validator": "6.1.*",
         "symfony/yaml": "6.1.*"
     },
     "config": {
@@ -66,7 +67,8 @@
             "@auto-scripts"
         ],
         "phpcs": "phpcs",
-        "phpstan": "phpstan"
+        "phpstan": "phpstan",
+        "phpunit": "phpunit"
     },
     "conflict": {
         "symfony/symfony": "*"

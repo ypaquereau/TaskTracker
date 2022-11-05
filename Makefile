@@ -7,7 +7,7 @@ COMPOSER = $(PHP_EXEC) composer
 
 ## —— Docker‍️ ————————————————————————————————————————————————————————————
 up:
-	$(DOCKER_COMPOSE) up -d
+	XDEBUG_MODE=coverage $(DOCKER_COMPOSE) up -d
 
 down:
 	$(DOCKER_COMPOSE) down
@@ -37,6 +37,9 @@ cs-fixer:
 
 phpstan:
 	$(COMPOSER) phpstan
+
+phpunit:
+	$(COMPOSER) phpunit
 
 ## —— Node ————————————————————————————————————————————————————————————
 
